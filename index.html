@@ -20,10 +20,10 @@ html, body {
   display: flex;
   flex-direction: column;
 
-  /* Background image with fade overlay */
+  /* Background image with fade overlay from images folder */
   background: 
     linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-    url('PeakBackground.jpg') no-repeat center center fixed;
+    url('images/PeakBackGround.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -167,7 +167,7 @@ section {
 <body>
 
 <header>
-  <img src="PeakLogoTransparent.png" class="logo">
+  <img src="images/PeakLogoTransparent.png" class="logo">
 </header>
 
 <!-- NAVIGATION -->
@@ -253,7 +253,7 @@ section {
                title="Dr. Jane Smith"
                data-bs-content="Specializes in orthopedic rehab & pain management. Over 10 years helping patients regain mobility and strength."
                style="cursor:pointer;">
-            <img src="JaneDoe.jpg" class="card-img-top">
+            <img src="images/JaneDoe.jpg" class="card-img-top">
             <div class="card-body">
               <h5>Dr. Jane Smith</h5>
               <p>Orthopedic rehab & pain management.</p>
@@ -270,7 +270,7 @@ section {
                title="John Doe, PT"
                data-bs-content="Focuses on sports rehabilitation and mobility recovery. 8 years experience working with athletes and active patients."
                style="cursor:pointer;">
-            <img src="JohnDoe.jpeg" class="card-img-top">
+            <img src="images/JohnDoe.jpeg" class="card-img-top">
             <div class="card-body">
               <h5>John Doe, PT</h5>
               <p>Sports rehabilitation & mobility recovery.</p>
@@ -287,7 +287,7 @@ section {
                title="Mary Johnson, DPT"
                data-bs-content="Provides restorative therapy and chronic pain care. Over 12 years helping patients regain independence and comfort."
                style="cursor:pointer;">
-            <img src="MaryJohnson.jpg" class="card-img-top">
+            <img src="images/MaryJohnson.jpg" class="card-img-top">
             <div class="card-body">
               <h5>Mary Johnson, DPT</h5>
               <p>Restorative therapy & chronic pain care.</p>
@@ -362,24 +362,20 @@ section {
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Providers tab button
   const providersTab = new bootstrap.Tab(document.querySelector('[data-bs-target="#providers"]'));
   document.getElementById('providersBtn').onclick = () => providersTab.show();
 
-  // Back to top
   const backToTop = document.getElementById("backToTop");
   window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
   backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Initialize popovers
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
-  placement: 'top',        // always appear above
-  boundary: 'viewport',    // prevent automatic flipping
-  container: el,           // ensures it stays within the card
-  trigger: 'hover'         // keeps focus behavior
-}));
-
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+  const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
+    placement: 'top',
+    boundary: 'viewport',
+    container: el,
+    trigger: 'hover'
+  }));
 </script>
 
 </body>
