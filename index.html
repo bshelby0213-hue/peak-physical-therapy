@@ -1,96 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peak Physical Therapy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peak Physical Therapy</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <style>
-    html, body {
-      min-height: 100vh;
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      background: 
-        linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-        url('images/peakbackground.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
+<style>
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+              url('images/peakbackground.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
 
-    .tab-content { flex: 1 0 auto; }
+.tab-content {
+  flex: 1 0 auto;
+}
 
-    footer {
-      flex-shrink: 0;
-      background: #003366;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+footer {
+  flex-shrink: 0;
+  background: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 
-    header {
-      background: #F2F2F2; 
-      height: 150px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      z-index: 10;
-    }
-    header img.logo { height: 205%; width: auto; }
+header {
+  background: #F2F2F2;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+header img.logo {
+  height: 205%;
+  width: auto;
+}
 
-    section {
-      background: rgba(255,255,255,0.95);
-      width: 75%;
-      margin: 20px auto;
-      padding: 40px 20px;
-      border-radius: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+/* Desktop Nav Tabs */
+.nav-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #003366;
+  height: 70px;
+  border-bottom: 2px solid #00A6A6;
+  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.nav-tabs .nav-link {
+  color: #ffffff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-tabs .nav-link:hover {
+  color: #00A6A6;
+}
+.nav-tabs .nav-link.active {
+  background-color: #00A6A6;
+  color: #003366;
+  border: none;
+}
 
-    .hero { padding: 80px 20px; color: #003366; margin-bottom: 40px; }
-    .service-card {
-      border: none;
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-top: 5px solid #00A6A6;
-    }
+/* Sections */
+section {
+  background: rgba(255,255,255,0.95);
+  width: 75%;
+  margin: 20px auto;
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
 
-    #testimonialCarousel blockquote { font-size: 1.2rem; color: #003366; background: transparent; }
-    #testimonialCarousel footer { background: transparent !important; color: #00A6A6; padding: 0 !important; }
+.hero {
+  background-color: transparent;
+  padding: 80px 20px;
+  border-radius: 16px;
+  color: #003366;
+  margin-bottom: 40px;
+}
 
-    .map-container iframe { border: 0; width: 100%; height: 300px; }
+.service-card {
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-top: 5px solid #00A6A6;
+}
 
-    #backToTop {
-      position: fixed; bottom: 40px; right: 40px;
-      background: #003366; color: white; border: none;
-      padding: 12px 15px; border-radius: 50px; font-size: 20px;
-      display: none; z-index: 999;
-    }
-    #backToTop:hover { background: #00A6A6; }
+#testimonialCarousel blockquote {
+  font-size: 1.2rem;
+  color: #003366;
+  background: transparent;
+}
+#testimonialCarousel footer {
+  background: transparent !important;
+  color: #00A6A6;
+  padding: 0 !important;
+}
 
-    .social-icons a { color: white; margin: 0 8px; font-size: 1.2rem; }
-    .social-icons a:hover { color: #00A6A6; }
+.map-container iframe {
+  border: 0;
+  width: 100%;
+  height: 300px;
+}
 
-    .provider-card img { height: 250px; width: 100%; object-fit: cover; border-top-left-radius: .375rem; border-top-right-radius: .375rem; }
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50px;
+  font-size: 20px;
+  display: none;
+  z-index: 999;
+}
+#backToTop:hover { background: #00A6A6; }
 
-    /* MOBILE RESPONSIVENESS */
-    @media (max-width: 768px) {
-      body { font-size: 16px; }
-      section { width: 90%; padding: 20px; }
-      header img.logo { height: 120px; }
-      .hero { padding: 40px 10px; }
-      .provider-card img { height: 200px; }
-      .service-card h4 { font-size: 1.1rem; }
-    }
-  </style>
+.social-icons a {
+  color: white;
+  margin: 0 8px;
+  font-size: 1.2rem;
+}
+.social-icons a:hover { color: #00A6A6; }
+
+.provider-card img {
+  height: 250px;     
+  width: 100%;      
+  object-fit: cover; 
+  border-top-left-radius: .375rem;
+  border-top-right-radius: .375rem;
+}
+
+/* MOBILE NAVBAR (Hamburger & links) */
+.navbar-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  body { font-size: 16px; }
+  section { width: 90%; padding: 20px; }
+  header img.logo { height: 120px; }
+  .hero { padding: 40px 10px; }
+  .provider-card img { height: 200px; }
+  .service-card h4 { font-size: 1.1rem; }
+
+  /* Hide desktop tabs, show mobile navbar */
+  .nav-tabs { display: none; }
+  .navbar-mobile { display: block; background-color: #003366; }
+
+  /* Hamburger styling */
+  .navbar-mobile .navbar-toggler {
+    border-color: #00A6A6;
+  }
+  .navbar-mobile .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  /* Mobile nav links matching desktop tabs */
+  .navbar-mobile .nav-link {
+    color: #ffffff;
+    margin: 0.25rem 0;
+  }
+  .navbar-mobile .nav-link:hover { color: #00A6A6; }
+  .navbar-mobile .nav-link.active {
+    background-color: #00A6A6;
+    color: #003366;
+  }
+
+  /* Collapse background */
+  .navbar-mobile .navbar-collapse { background-color: #003366; }
+}
+</style>
 </head>
 <body>
 
@@ -98,64 +196,58 @@
   <img src="images/PeakLogoTransparent.png" class="logo">
 </header>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#003366;">
+<!-- Desktop Tabs -->
+<ul class="nav nav-tabs" id="clinicTabs">
+  <li class="nav-item"><button class="nav-link active" data-bs-target="#home" data-bs-toggle="tab">Home</button></li>
+  <li class="nav-item"><button class="nav-link" data-bs-target="#about" data-bs-toggle="tab">About Us</button></li>
+  <li class="nav-item"><button class="nav-link" data-bs-target="#providers" data-bs-toggle="tab">Our Providers</button></li>
+  <li class="nav-item"><button class="nav-link" data-bs-target="#contact" data-bs-toggle="tab">Contact</button></li>
+</ul>
+
+<!-- Mobile Navbar -->
+<nav class="navbar navbar-mobile navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand d-lg-none" href="#">Menu</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" data-tab-target="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" data-tab-target="#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" data-tab-target="#providers">Our Providers</a></li>
-        <li class="nav-item"><a class="nav-link" data-tab-target="#contact">Contact</a></li>
+    <div class="collapse navbar-collapse" id="mobileNav">
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item"><a class="nav-link active" data-bs-target="#home" data-bs-toggle="tab">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-target="#about" data-bs-toggle="tab">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-target="#providers" data-bs-toggle="tab">Our Providers</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-target="#contact" data-bs-toggle="tab">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- CONTENT -->
 <div class="tab-content">
-  <!-- HOME TAB -->
+  <!-- HOME -->
   <div class="tab-pane fade show active" id="home">
     <section>
       <div class="hero">
         <h1 class="display-5 mb-3">Welcome to Peak Physical Therapy</h1>
         <p class="lead">Helping you move better, feel better, and live better.</p>
       </div>
-
       <div class="row g-4 mb-4">
-        <div class="col-12 col-md-4">
-          <div class="card service-card p-3"><h4>Orthopedic Rehab</h4><p>Recover faster and improve mobility after injuries or surgery.</p></div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="card service-card p-3"><h4>Pain Management</h4><p>Personalized plans to reduce chronic pain and restore function.</p></div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="card service-card p-3"><h4>Sports Performance</h4><p>Strengthen, stabilize, and enhance athletic performance.</p></div>
-        </div>
+        <div class="col-12 col-md-4"><div class="card service-card p-3"><h4>Orthopedic Rehab</h4><p>Recover faster and improve mobility after injuries or surgery.</p></div></div>
+        <div class="col-12 col-md-4"><div class="card service-card p-3"><h4>Pain Management</h4><p>Personalized plans to reduce chronic pain and restore function.</p></div></div>
+        <div class="col-12 col-md-4"><div class="card service-card p-3"><h4>Sports Performance</h4><p>Strengthen, stabilize, and enhance athletic performance.</p></div></div>
       </div>
-
       <button class="btn btn-primary my-3" id="providersBtn">Meet Our Providers</button>
 
       <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner text-center">
-          <div class="carousel-item active">
-            <blockquote>"Peak Physical Therapy helped me recover faster than expected."<footer>— Jane D.</footer></blockquote>
-          </div>
-          <div class="carousel-item">
-            <blockquote>"Professional, caring, and knowledgeable."<footer>— Mark S.</footer></blockquote>
-          </div>
-          <div class="carousel-item">
-            <blockquote>"Excellent service and friendly staff!"<footer>— Lisa P.</footer></blockquote>
-          </div>
+          <div class="carousel-item active"><blockquote>"Peak Physical Therapy helped me recover faster than expected."<footer>— Jane D.</footer></blockquote></div>
+          <div class="carousel-item"><blockquote>"Professional, caring, and knowledgeable."<footer>— Mark S.</footer></blockquote></div>
+          <div class="carousel-item"><blockquote>"Excellent service and friendly staff!"<footer>— Lisa P.</footer></blockquote></div>
         </div>
       </div>
     </section>
   </div>
 
-  <!-- ABOUT TAB -->
+  <!-- ABOUT -->
   <div class="tab-pane fade" id="about">
     <section>
       <h2>Who We Are</h2>
@@ -164,7 +256,7 @@
     </section>
   </div>
 
-  <!-- PROVIDERS TAB -->
+  <!-- PROVIDERS -->
   <div class="tab-pane fade" id="providers">
     <section>
       <h2 class="mb-4">Our Providers</h2>
@@ -191,7 +283,7 @@
     </section>
   </div>
 
-  <!-- CONTACT TAB -->
+  <!-- CONTACT -->
   <div class="tab-pane fade" id="contact">
     <section>
       <h2>Contact Us</h2>
@@ -243,47 +335,46 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Tab switching for navbar
-  const navLinks = document.querySelectorAll('.nav-link[data-tab-target]');
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('show','active'));
-      const target = document.querySelector(link.dataset.tabTarget);
-      target.classList.add('show','active');
+// Providers tab button
+const providersTab = new bootstrap.Tab(document.querySelector('[data-bs-target="#providers"]'));
+document.getElementById('providersBtn').onclick = () => providersTab.show();
 
-      // Close mobile menu after click
-      const navbarCollapse = document.querySelector('.navbar-collapse');
-      if(navbarCollapse.classList.contains('show')) new bootstrap.Collapse(navbarCollapse).toggle();
-    });
+// Back to top button
+const backToTop = document.getElementById("backToTop");
+window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+// Popovers
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
+  placement: 'top',
+  boundary: 'viewport',
+  container: el,
+  trigger: 'hover'
+}));
+
+// MOBILE nav link toggling
+const mobileLinks = document.querySelectorAll('.navbar-mobile .nav-link');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault(); // prevent default jump
+    mobileLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+
+    const targetSelector = link.getAttribute('data-bs-target');
+    const desktopTrigger = document.querySelector(`.nav-tabs [data-bs-target="${targetSelector}"]`);
+    if (desktopTrigger) {
+      bootstrap.Tab.getOrCreateInstance(desktopTrigger).show();
+    }
+
+    // Close mobile menu
+    const collapseEl = document.getElementById('mobileNav');
+    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl);
+    bsCollapse.hide();
   });
-
-  // Scroll to top
-  const backToTop = document.getElementById("backToTop");
-  window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
-  backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-  // Popovers
-  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-  [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
-    placement: 'top',
-    boundary: 'viewport',
-    container: el,
-    trigger: 'hover'
-  }));
-
-  // Providers button
-  const providersTab = new bootstrap.Tab(document.querySelector('[data-tab-target="#providers"]'));
-  document.getElementById('providersBtn').onclick = () => {
-    providersTab.show();
-    document.querySelectorAll('.nav-link[data-tab-target]').forEach(l => l.classList.remove('active'));
-    document.querySelector('.nav-link[data-tab-target="#providers"]').classList.add('active');
-  };
+});
 </script>
-
 </body>
 </html>
