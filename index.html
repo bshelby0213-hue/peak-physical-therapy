@@ -11,175 +11,133 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <style>
-html, body {
-  min-height: 100vh;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: #333;
-  display: flex;
-  flex-direction: column;
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      color: #333;
+      display: flex;
+      flex-direction: column;
 
-  /* Background image with fade overlay from images folder */
-  background: 
-    linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-    url('images/peakbackground.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
+      /* Background image with fade overlay from images folder */
+      background: 
+        linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+        url('images/peakbackground.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-.tab-content {
-  flex: 1 0 auto;
-}
+    .tab-content {
+      flex: 1 0 auto;
+    }
 
-footer {
-  flex-shrink: 0;
-  background: #003366;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+    footer {
+      flex-shrink: 0;
+      background: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-header {
-  background: #F2F2F2; 
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  z-index: 10;
-}
-header img.logo {
-  height: 205%;
-  width: auto;
-}
+    header {
+      background: #F2F2F2; 
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
 
-/* Fixed Navbar */
-.nav-tabs {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #003366;
-  height: 70px;
-  border-bottom: 2px solid #00A6A6;
-  justify-content: center;
-  overflow-x: auto;      /* scrollable on mobile */
-  white-space: nowrap;
-}
-.nav-tabs .nav-item {
-  display: inline-block;
-}
-.nav-tabs .nav-link {
-  color: #ffffff;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.nav-tabs .nav-link:hover {
-  color: #00A6A6;
-}
-.nav-tabs .nav-link.active {
-  background-color: #00A6A6;
-  color: #003366;
-  border: none;
-}
+    header img.logo {
+      height: 205%;
+      width: auto;
+    }
 
-section {
-  background: rgba(255,255,255,0.95);
-  width: 75%;
-  margin: 20px auto;
-  padding: 40px 20px;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    section {
+      background: rgba(255,255,255,0.95);
+      width: 75%;
+      margin: 20px auto;
+      padding: 40px 20px;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-.hero {
-  background-color: transparent;
-  padding: 80px 20px;
-  border-radius: 16px;
-  color: #003366;
-  margin-bottom: 40px;
-}
+    .hero {
+      background-color: transparent;
+      padding: 80px 20px;
+      border-radius: 16px;
+      color: #003366;
+      margin-bottom: 40px;
+    }
 
-.service-card {
-  border: none;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-top: 5px solid #00A6A6;
-}
+    .service-card {
+      border: none;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-top: 5px solid #00A6A6;
+    }
 
-#testimonialCarousel blockquote {
-  font-size: 1.2rem;
-  color: #003366;
-  background: transparent;
-}
-#testimonialCarousel footer {
-  background: transparent !important;
-  color: #00A6A6;
-  padding: 0 !important;
-}
+    #testimonialCarousel blockquote {
+      font-size: 1.2rem;
+      color: #003366;
+      background: transparent;
+    }
 
-.map-container iframe {
-  border: 0;
-  width: 100%;
-  height: 300px;
-}
+    #testimonialCarousel footer {
+      background: transparent !important;
+      color: #00A6A6;
+      padding: 0 !important;
+    }
 
-#backToTop {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  background: #003366;
-  color: white;
-  border: none;
-  padding: 12px 15px;
-  border-radius: 50px;
-  font-size: 20px;
-  display: none;
-  z-index: 999;
-}
-#backToTop:hover { background: #00A6A6; }
+    .map-container iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+    }
 
-.social-icons a {
-  color: white;
-  margin: 0 8px;
-  font-size: 1.2rem;
-}
-.social-icons a:hover {
-  color: #00A6A6;
-}
+    #backToTop {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 50px;
+      font-size: 20px;
+      display: none;
+      z-index: 999;
+    }
 
-.provider-card img {
-  height: 250px;     
-  width: 100%;      
-  object-fit: cover; 
-  border-top-left-radius: .375rem;
-  border-top-right-radius: .375rem;
-}
+    #backToTop:hover { background: #00A6A6; }
 
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  section {
-    width: 90%;
-    padding: 20px;
-  }
-  header img.logo {
-    height: 120px;
-  }
-  .hero {
-    padding: 40px 10px;
-  }
-  .provider-card img {
-    height: 200px;
-  }
-  .service-card h4 {
-    font-size: 1.1rem;
-  }
-}
+    .social-icons a {
+      color: white;
+      margin: 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .social-icons a:hover { color: #00A6A6; }
+
+    .provider-card img {
+      height: 250px;     
+      width: 100%;      
+      object-fit: cover; 
+      border-top-left-radius: .375rem;
+      border-top-right-radius: .375rem;
+    }
+
+    /* MOBILE RESPONSIVENESS */
+    @media (max-width: 768px) {
+      body { font-size: 16px; }
+      section { width: 90%; padding: 20px; }
+      header img.logo { height: 120px; }
+      .hero { padding: 40px 10px; }
+      .provider-card img { height: 200px; }
+      .service-card h4 { font-size: 1.1rem; }
+    }
   </style>
 </head>
 <body>
@@ -188,12 +146,23 @@ section {
   <img src="images/PeakLogoTransparent.png" class="logo">
 </header>
 
-<ul class="nav nav-tabs" id="clinicTabs" role="tablist">
-  <li class="nav-item"><button class="nav-link active" data-bs-target="#home" data-bs-toggle="tab">Home</button></li>
-  <li class="nav-item"><button class="nav-link" data-bs-target="#about" data-bs-toggle="tab">About Us</button></li>
-  <li class="nav-item"><button class="nav-link" data-bs-target="#providers" data-bs-toggle="tab">Our Providers</button></li>
-  <li class="nav-item"><button class="nav-link" data-bs-target="#contact" data-bs-toggle="tab">Contact</button></li>
-</ul>
+<!-- RESPONSIVE NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#003366;">
+  <div class="container-fluid">
+    <a class="navbar-brand d-lg-none" href="#">Menu</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#providers">Our Providers</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <div class="tab-content">
   <!-- HOME TAB -->
@@ -305,6 +274,35 @@ section {
   </div>
 </div>
 
+<!-- CONTACT FORM MODAL -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="container">
     <p>© <span id="year"></span> Peak Physical Therapy</p>
@@ -320,20 +318,22 @@ section {
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-const providersTab = new bootstrap.Tab(document.querySelector('[data-bs-target="#providers"]'));
-document.getElementById('providersBtn').onclick = () => providersTab.show();
-const backToTop = document.getElementById("backToTop");
-window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
-backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
-  placement: 'top',
-  boundary: 'viewport',
-  container: el,
-  trigger: 'hover'
-}));
+  const providersTab = new bootstrap.Tab(document.querySelector('[data-bs-target="#providers"]'));
+  document.getElementById('providersBtn').onclick = () => providersTab.show();
+
+  const backToTop = document.getElementById("backToTop");
+  window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+  backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+  const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
+    placement: 'top',
+    boundary: 'viewport',
+    container: el,
+    trigger: 'hover'
+  }));
 </script>
 
 </body>
