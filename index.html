@@ -27,7 +27,6 @@ html, body {
   background-size: cover;
 }
 
-/* Make the tab content fill remaining space so footer stays at bottom */
 .tab-content {
   flex: 1 0 auto;
 }
@@ -40,7 +39,6 @@ footer {
   text-align: center;
 }
 
-/* Header */
 header {
   background: #F2F2F2; 
   height: 150px;
@@ -64,6 +62,11 @@ header img.logo {
   height: 70px;
   border-bottom: 2px solid #00A6A6;
   justify-content: center;
+  overflow-x: auto;      /* scrollable on mobile */
+  white-space: nowrap;
+}
+.nav-tabs .nav-item {
+  display: inline-block;
 }
 .nav-tabs .nav-link {
   color: #ffffff;
@@ -81,7 +84,6 @@ header img.logo {
   border: none;
 }
 
-/* Content container sections */
 section {
   background: rgba(255,255,255,0.95);
   width: 75%;
@@ -92,7 +94,6 @@ section {
   text-align: center;
 }
 
-/* Hero Banner */
 .hero {
   background-color: transparent;
   padding: 80px 20px;
@@ -101,7 +102,6 @@ section {
   margin-bottom: 40px;
 }
 
-/* Service Cards */
 .service-card {
   border: none;
   background: #ffffff;
@@ -109,7 +109,6 @@ section {
   border-top: 5px solid #00A6A6;
 }
 
-/* Testimonials */
 #testimonialCarousel blockquote {
   font-size: 1.2rem;
   color: #003366;
@@ -121,14 +120,12 @@ section {
   padding: 0 !important;
 }
 
-/* Map */
 .map-container iframe {
   border: 0;
   width: 100%;
   height: 300px;
 }
 
-/* Back to top button */
 #backToTop {
   position: fixed;
   bottom: 40px;
@@ -144,7 +141,6 @@ section {
 }
 #backToTop:hover { background: #00A6A6; }
 
-/* Footer social icons */
 .social-icons a {
   color: white;
   margin: 0 8px;
@@ -154,13 +150,35 @@ section {
   color: #00A6A6;
 }
 
-/* Provider card images - uniform size */
 .provider-card img {
   height: 250px;     
   width: 100%;      
   object-fit: cover; 
   border-top-left-radius: .375rem;
   border-top-right-radius: .375rem;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  section {
+    width: 90%;
+    padding: 20px;
+  }
+  header img.logo {
+    height: 120px;
+  }
+  .hero {
+    padding: 40px 10px;
+  }
+  .provider-card img {
+    height: 200px;
+  }
+  .service-card h4 {
+    font-size: 1.1rem;
+  }
 }
   </style>
 </head>
@@ -170,7 +188,6 @@ section {
   <img src="images/PeakLogoTransparent.png" class="logo">
 </header>
 
-<!-- NAVIGATION -->
 <ul class="nav nav-tabs" id="clinicTabs" role="tablist">
   <li class="nav-item"><button class="nav-link active" data-bs-target="#home" data-bs-toggle="tab">Home</button></li>
   <li class="nav-item"><button class="nav-link" data-bs-target="#about" data-bs-toggle="tab">About Us</button></li>
@@ -178,9 +195,7 @@ section {
   <li class="nav-item"><button class="nav-link" data-bs-target="#contact" data-bs-toggle="tab">Contact</button></li>
 </ul>
 
-<!-- CONTENT -->
 <div class="tab-content">
-
   <!-- HOME TAB -->
   <div class="tab-pane fade show active" id="home">
     <section>
@@ -190,19 +205,19 @@ section {
       </div>
 
       <div class="row g-4 mb-4">
-        <div class="col-md-4">
+        <div class="col-12 col-md-4">
           <div class="card service-card p-3">
             <h4>Orthopedic Rehab</h4>
             <p>Recover faster and improve mobility after injuries or surgery.</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-12 col-md-4">
           <div class="card service-card p-3">
             <h4>Pain Management</h4>
             <p>Personalized plans to reduce chronic pain and restore function.</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-12 col-md-4">
           <div class="card service-card p-3">
             <h4>Sports Performance</h4>
             <p>Strengthen, stabilize, and enhance athletic performance.</p>
@@ -225,7 +240,6 @@ section {
           </div>
         </div>
       </div>
-
     </section>
   </div>
 
@@ -242,17 +256,9 @@ section {
   <div class="tab-pane fade" id="providers">
     <section>
       <h2 class="mb-4">Our Providers</h2>
-
       <div class="row g-4">
-        <!-- Dr. Jane Smith -->
-        <div class="col-md-4">
-          <div class="card h-100 clickable-card provider-card"
-               tabindex="0"
-               data-bs-toggle="popover"
-               data-bs-trigger="focus"
-               title="Dr. Jane Smith"
-               data-bs-content="Specializes in orthopedic rehab & pain management. Over 10 years helping patients regain mobility and strength."
-               style="cursor:pointer;">
+        <div class="col-12 col-md-4">
+          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Dr. Jane Smith" data-bs-content="Specializes in orthopedic rehab & pain management. Over 10 years helping patients regain mobility and strength." style="cursor:pointer;">
             <img src="images/JaneDoe.jpg" class="card-img-top">
             <div class="card-body">
               <h5>Dr. Jane Smith</h5>
@@ -260,16 +266,8 @@ section {
             </div>
           </div>
         </div>
-
-        <!-- John Doe -->
-        <div class="col-md-4">
-          <div class="card h-100 clickable-card provider-card"
-               tabindex="0"
-               data-bs-toggle="popover"
-               data-bs-trigger="focus"
-               title="John Doe, PT"
-               data-bs-content="Focuses on sports rehabilitation and mobility recovery. 8 years experience working with athletes and active patients."
-               style="cursor:pointer;">
+        <div class="col-12 col-md-4">
+          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="John Doe, PT" data-bs-content="Focuses on sports rehabilitation and mobility recovery. 8 years experience working with athletes and active patients." style="cursor:pointer;">
             <img src="images/JohnDoe.jpeg" class="card-img-top">
             <div class="card-body">
               <h5>John Doe, PT</h5>
@@ -277,16 +275,8 @@ section {
             </div>
           </div>
         </div>
-
-        <!-- Mary Johnson -->
-        <div class="col-md-4">
-          <div class="card h-100 clickable-card provider-card"
-               tabindex="0"
-               data-bs-toggle="popover"
-               data-bs-trigger="focus"
-               title="Mary Johnson, DPT"
-               data-bs-content="Provides restorative therapy and chronic pain care. Over 12 years helping patients regain independence and comfort."
-               style="cursor:pointer;">
+        <div class="col-12 col-md-4">
+          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Mary Johnson, DPT" data-bs-content="Provides restorative therapy and chronic pain care. Over 12 years helping patients regain independence and comfort." style="cursor:pointer;">
             <img src="images/MaryJohnson.jpg" class="card-img-top">
             <div class="card-body">
               <h5>Mary Johnson, DPT</h5>
@@ -313,36 +303,6 @@ section {
       <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#contactModal">Send Us a Message</button>
     </section>
   </div>
-
-</div>
-
-<!-- CONTACT FORM MODAL -->
-<div class="modal fade" id="contactModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Contact Us</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Message</label>
-            <textarea class="form-control" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </div>
 </div>
 
 <footer>
@@ -360,22 +320,20 @@ section {
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
+const providersTab = new bootstrap.Tab(document.querySelector('[data-bs-target="#providers"]'));
+document.getElementById('providersBtn').onclick = () => providersTab.show();
+const backToTop = document.getElementById("backToTop");
+window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const providersTab = new bootstrap.Tab(document.querySelector('[data-bs-target="#providers"]'));
-  document.getElementById('providersBtn').onclick = () => providersTab.show();
-
-  const backToTop = document.getElementById("backToTop");
-  window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
-  backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-  const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
-    placement: 'top',
-    boundary: 'viewport',
-    container: el,
-    trigger: 'hover'
-  }));
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
+  placement: 'top',
+  boundary: 'viewport',
+  container: el,
+  trigger: 'hover'
+}));
 </script>
 
 </body>
