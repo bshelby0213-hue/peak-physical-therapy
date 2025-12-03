@@ -286,14 +286,17 @@ section {
   <!-- CONTACT -->
   <div class="tab-pane fade" id="contact">
     <section>
-      <h2>Contact Us</h2>
-      <p><strong>Address:</strong> 1707 West 20th Street, Laurel, MS</p>
-      <p><strong>Phone:</strong> <a href="tel:+16014282004">(601) 428-2004</a></p>
-      <p><strong>Email:</strong> <a href="mailto:bchurch@mms-ms.com">bchurch@mms-ms.com</a></p>
 
-      <div class="row mt-4">
-        <!-- MAP COLUMN -->
+      <div class="row mt-4 align-items-start">
+        <!-- CONTACT INFO COLUMN -->
         <div class="col-md-5 mb-3">
+          <p><strong>Address:</strong> 1707 West 20th Street, Laurel, MS</p>
+          <p><strong>Phone:</strong> <a href="tel:+16014282004">(601) 428-2004</a></p>
+          <p><strong>Email:</strong> <a href="mailto:bchurch@mms-ms.com">bchurch@mms-ms.com</a></p>
+        </div>
+
+        <!-- MAP COLUMN -->
+        <div class="col-md-7 mb-3">
           <div class="map-container" style="overflow:hidden; border-radius:12px;">
             <iframe 
               src="https://www.google.com/maps?q=1707%20West%2020th%20Street%20Laurel%20MS&output=embed" 
@@ -303,9 +306,11 @@ section {
             </iframe>
           </div>
         </div>
+      </div>
 
-        <!-- FORM COLUMN -->
-        <div class="col-md-7">
+      <!-- GOOGLE FORM ROW -->
+      <div class="row mt-4">
+        <div class="col-12">
           <div style="background:white; border-radius:12px; overflow:hidden; padding:0;">
             <iframe 
               id="contactForm" 
@@ -316,6 +321,7 @@ section {
           </div>
         </div>
       </div>
+
     </section>
   </div>
 </div>
@@ -379,7 +385,7 @@ mobileLinks.forEach(link => {
 function resizeContactForm() {
   const iframe = document.getElementById('contactForm');
   const windowHeight = window.innerHeight;
-  const offset = 250; // adjust for header/footer/map
+  const offset = 350; // adjust for header/footer/contact row
   iframe.style.height = (windowHeight - offset) + 'px';
 }
 
