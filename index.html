@@ -103,21 +103,10 @@ section {
   border-top: 5px solid #00A6A6;
 }
 
-#testimonialCarousel blockquote {
-  font-size: 1.2rem;
-  color: #003366;
-  background: transparent;
-}
-#testimonialCarousel footer {
-  background: transparent !important;
-  color: #00A6A6;
-  padding: 0 !important;
-}
-
 .map-container iframe {
   border: 0;
   width: 100%;
-  height: 200px; /* smaller map */
+  height: 200px;
 }
 
 #backToTop {
@@ -142,51 +131,29 @@ section {
 }
 .social-icons a:hover { color: #00A6A6; }
 
+/* Provider Images */
 .provider-card img {
-  height: 250px;     
-  width: 100%;      
-  object-fit: cover; 
+  width: 100%;       /* full width of card */
+  height: 500px;     /* uniform height */
+  object-fit: cover; /* crop/scale properly */
   border-top-left-radius: .375rem;
   border-top-right-radius: .375rem;
 }
 
-/* MOBILE NAVBAR (Hamburger & links) */
-.navbar-mobile {
-  display: none;
-}
+/* MOBILE NAVBAR */
+.navbar-mobile { display: none; }
 @media (max-width: 768px) {
   body { font-size: 16px; }
   section { width: 90%; padding: 20px; }
   header img.logo { height: 120px; }
   .hero { padding: 40px 10px; }
-  .provider-card img { height: 200px; }
   .service-card h4 { font-size: 1.1rem; }
-
-  /* Hide desktop tabs, show mobile navbar */
+  .provider-card img { height: 200px; }
   .nav-tabs { display: none; }
-  .navbar-mobile { display: block; background-color: #003366; }
-
-  /* Hamburger styling */
-  .navbar-mobile .navbar-toggler {
-    border-color: #00A6A6;
-  }
-  .navbar-mobile .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
-
-  /* Mobile nav links matching desktop tabs */
-  .navbar-mobile .nav-link {
-    color: #ffffff;
-    margin: 0.25rem 0;
-  }
+  .navbar-mobile { display: block; }
+  .navbar-mobile .nav-link { color: #ffffff; margin: 0.25rem 0; }
   .navbar-mobile .nav-link:hover { color: #00A6A6; }
-  .navbar-mobile .nav-link.active {
-    background-color: #00A6A6;
-    color: #003366;
-  }
-
-  /* Collapse background */
-  .navbar-mobile .navbar-collapse { background-color: #003366; }
+  .navbar-mobile .nav-link.active { background-color: #00A6A6; color: #003366; }
 }
 </style>
 </head>
@@ -221,28 +188,14 @@ section {
   </div>
 </nav>
 
-<!-- CONTENT -->
 <div class="tab-content">
+
   <!-- HOME -->
   <div class="tab-pane fade show active" id="home">
     <section>
       <div class="hero">
         <h1 class="display-5 mb-3">Welcome to Peak Physical Therapy</h1>
         <p class="lead">Helping you move better, feel better, and live better.</p>
-      </div>
-      <div class="row g-4 mb-4">
-        <div class="col-12 col-md-4"><div class="card service-card p-3"><h4>Orthopedic Rehab</h4><p>Recover faster and improve mobility after injuries or surgery.</p></div></div>
-        <div class="col-12 col-md-4"><div class="card service-card p-3"><h4>Pain Management</h4><p>Personalized plans to reduce chronic pain and restore function.</p></div></div>
-        <div class="col-12 col-md-4"><div class="card service-card p-3"><h4>Sports Performance</h4><p>Strengthen, stabilize, and enhance athletic performance.</p></div></div>
-      </div>
-      <button class="btn btn-primary my-3" id="providersBtn">Meet Our Providers</button>
-
-      <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner text-center">
-          <div class="carousel-item active"><blockquote>"Peak Physical Therapy helped me recover faster than expected."<footer>— Jane D.</footer></blockquote></div>
-          <div class="carousel-item"><blockquote>"Professional, caring, and knowledgeable."<footer>— Mark S.</footer></blockquote></div>
-          <div class="carousel-item"><blockquote>"Excellent service and friendly staff!"<footer>— Lisa P.</footer></blockquote></div>
-        </div>
       </div>
     </section>
   </div>
@@ -252,7 +205,6 @@ section {
     <section>
       <h2>Who We Are</h2>
       <p>Peak Physical Therapy is dedicated to helping individuals regain mobility, strength, and confidence through personalized care.</p>
-      <p>Our licensed therapists bring over 20 years of combined experience.</p>
     </section>
   </div>
 
@@ -260,102 +212,61 @@ section {
   <div class="tab-pane fade" id="providers">
     <section>
       <h2 class="mb-4">Our Providers</h2>
-	    <p class="text-lg text-gray-700 mb-8">
-      We’re currently updating our services page to serve you better.
-      Stay tuned—exciting updates are coming soon!
-    </p>
-      <!--<div class="row g-4">
-        <div class="col-12 col-md-4">
-          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Dr. Jane Smith" data-bs-content="Specializes in orthopedic rehab & pain management. Over 10 years helping patients regain mobility and strength." style="cursor:pointer;">
-            <img src="images/JaneDoe.jpg" class="card-img-top">
-            <div class="card-body"><h5>Dr. Jane Smith</h5><p>Orthopedic rehab & pain management.</p></div>
+      <div class="row g-4">
+        <!-- Joey -->
+        <div class="col-12 col-md-3">
+          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Joey Cooley PT, DPT" data-bs-content="Joey specializes in craniofacial treatment, TMJ, headaches, and facial palsies." style="cursor:pointer;">
+            <img src="images/Joey.jpg" class="card-img-top">
+            <div class="card-body"><h5>Joey Cooley PT, DPT</h5><p>Craniofacial & TMJ Therapy</p></div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="John Doe, PT" data-bs-content="Focuses on sports rehabilitation and mobility recovery. 8 years experience working with athletes and active patients." style="cursor:pointer;">
-            <img src="images/JohnDoe.jpeg" class="card-img-top">
-            <div class="card-body"><h5>John Doe, PT</h5><p>Sports rehabilitation & mobility recovery.</p></div>
+
+        <!-- Brady -->
+        <div class="col-12 col-md-3">
+          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Brady Church PT, DPT" data-bs-content="Brady specializes in sports and orthopedic rehabilitation." style="cursor:pointer;">
+            <img src="images/Brady.jpg" class="card-img-top">
+            <div class="card-body"><h5>Brady Church PT, DPT</h5><p>Sports & Orthopedic Rehabilitation</p></div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Mary Johnson, DPT" data-bs-content="Provides restorative therapy and chronic pain care. Over 12 years helping patients regain independence and comfort." style="cursor:pointer;">
-            <img src="images/MaryJohnson.jpg" class="card-img-top">
-            <div class="card-body"><h5>Mary Johnson, DPT</h5><p>Restorative therapy & chronic pain care.</p></div>
+
+        <!-- Cody -->
+        <div class="col-12 col-md-3">
+          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Cody Rogers, DPT" data-bs-content="Cody specializes in geriatric and balance rehabilitation." style="cursor:pointer;">
+            <img src="images/Cody.jpg" class="card-img-top">
+            <div class="card-body"><h5>Cody Rogers, DPT</h5><p>Geriatric & Balance Rehabilitation</p></div>
           </div>
         </div>
+
+        <!-- Bailey -->
+        <div class="col-12 col-md-3">
+          <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Bailey Bynum, PT, DPT" data-bs-content="Bailey specializes in pelvic health and LSVT BIG therapy." style="cursor:pointer;">
+            <img src="images/Bailey.jpg" class="card-img-top">
+            <div class="card-body"><h5>Bailey Bynum, PT, DPT</h5><p>Pelvic Health Specialist</p></div>
+          </div>
+        </div>
+
       </div>
-	  !-->
     </section>
   </div>
 
   <!-- CONTACT -->
   <div class="tab-pane fade" id="contact">
     <section>
-
-      <div class="row mt-4 align-items-start">
-        <!-- CONTACT INFO COLUMN -->
-        <div class="col-md-5 mb-3">
-          <p><strong>Address:</strong> 1707 West 20th Street, Laurel, MS</p>
-          <p><strong>Phone:</strong> <a href="tel:+16014282004">(601) 428-2004</a></p>
-          <p><strong>Email:</strong> <a href="mailto:bchurch@mms-ms.com">bchurch@mms-ms.com</a></p>
-        </div>
-
-        <!-- MAP COLUMN -->
-        <div class="col-md-7 mb-3">
-          <div class="map-container" style="overflow:hidden; border-radius:12px;">
-            <iframe 
-              src="https://www.google.com/maps?q=1707%20West%2020th%20Street%20Laurel%20MS&output=embed" 
-              style="width:100%; height:200px; border:0;" 
-              allowfullscreen 
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
-      </div>
-
-      <!-- GOOGLE FORM ROW -->
-      <div class="row mt-4">
-        <div class="col-12">
-          <div style="background:white; border-radius:12px; overflow:hidden; padding:0;">
-            <iframe 
-              id="contactForm" 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeogBotqBvyYvw7WyKU7Hu70oBKcYn_bmi_rwgNdmf9DT1rCw/viewform" 
-              style="width:100%; border:0;" 
-              scrolling="no">
-            </iframe>
-          </div>
-        </div>
-      </div>
-
+      <p>Contact information goes here.</p>
     </section>
   </div>
+
 </div>
 
 <footer>
   <div class="container">
     <p>© <span id="year"></span> Peak Physical Therapy</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=61575786676765" target="_blank"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/peakptlaurel/" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a>
-    </div>
   </div>
 </footer>
-
-<button id="backToTop"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-
-// Providers tab button
-const providersTab = new bootstrap.Tab(document.querySelector('[data-bs-target="#providers"]'));
-document.getElementById('providersBtn').onclick = () => providersTab.show();
-
-// Back to top button
-const backToTop = document.getElementById("backToTop");
-window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
-backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 // Popovers
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
@@ -365,37 +276,7 @@ const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, 
   container: el,
   trigger: 'hover'
 }));
-
-// MOBILE nav link toggling
-const mobileLinks = document.querySelectorAll('.navbar-mobile .nav-link');
-mobileLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    mobileLinks.forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-
-    const targetSelector = link.getAttribute('data-bs-target');
-    const desktopTrigger = document.querySelector(`.nav-tabs [data-bs-target="${targetSelector}"]`);
-    if (desktopTrigger) {
-      bootstrap.Tab.getOrCreateInstance(desktopTrigger).show();
-    }
-
-    const collapseEl = document.getElementById('mobileNav');
-    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl);
-    bsCollapse.hide();
-  });
-});
-
-// DYNAMIC GOOGLE FORM HEIGHT
-function resizeContactForm() {
-  const iframe = document.getElementById('contactForm');
-  const windowHeight = window.innerHeight;
-  const offset = 350; // adjust for header/footer/contact row
-  iframe.style.height = (windowHeight - offset) + 'px';
-}
-
-window.addEventListener('load', resizeContactForm);
-window.addEventListener('resize', resizeContactForm);
 </script>
+
 </body>
 </html>
