@@ -13,6 +13,7 @@
 html, body {
   min-height: 100vh;
   margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   color: #333;
@@ -25,6 +26,12 @@ html, body {
 
 .tab-content {
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.tab-content section {
+  flex: 1 0 auto;
+  margin-bottom: 0;
 }
 
 footer {
@@ -81,7 +88,7 @@ header img.logo {
 section {
   background: rgba(255,255,255,0.95);
   width: 75%;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 40px 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -134,8 +141,8 @@ section {
 /* Provider Images */
 .provider-card img {
   width: 100%;
-  height: 600px;      /* uniform height */
-  object-fit: cover;  /* crop/scale properly */
+  height: 600px;
+  object-fit: cover;
   border-top-left-radius: .375rem;
   border-top-right-radius: .375rem;
 }
@@ -158,10 +165,10 @@ section {
   .navbar-mobile .nav-link { color: #ffffff; margin: 0.25rem 0; }
   .navbar-mobile .nav-link:hover { color: #00A6A6; }
   .navbar-mobile .nav-link.active { background-color: #339957; color: #003366; }
-   .provider-card img {
-    height: auto;      /* let height adjust */
-    max-height: 300px; /* optional max */
-    object-fit: contain; /* keeps full image visible */
+  .provider-card img {
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
   }
 }
 .navbar-mobile .navbar-toggler-icon {
@@ -170,20 +177,20 @@ section {
 #testimonialCarousel blockquote {
   font-size: 1.2rem;
   color: #003366;
-  background: transparent; /* keeps the blockquote background transparent */
-  border: none;             /* removes any border */
-  padding: 0;               /* remove extra padding if needed */
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 #testimonialCarousel footer {
-  background: transparent !important; /* ensures name background is transparent */
-  color: #003366 !important;          /* set name color */
-  padding: 0 !important;              /* remove extra padding around name */
-  font-style: normal;                 /* optional: make name normal style, not italic */
+  background: transparent !important;
+  color: #003366 !important;
+  padding: 0 !important;
+  font-style: normal;
 }
 .contact-form-container {
   width: 100%;
-  height: 80vh; /* or 100% of remaining space */
-  max-height: 1000px; /* optional max height */
+  height: 80vh;
+  max-height: 1000px;
   display: flex;
   flex-direction: column;
   border-radius: 12px;
@@ -203,10 +210,10 @@ section {
 .contact-row .col-md-7 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* aligns content to top */
+  justify-content: flex-start;
 }
 .map-container {
-  flex: 1; /* makes map column match height of contact info */
+  flex: 1;
 }
 </style>
 </head>
@@ -312,51 +319,46 @@ section {
     </section>
   </div>
 
-<!-- CONTACT -->
-<div class="tab-pane fade" id="contact">
-  <section>
-    <div class="row g-4">
-      <!-- Contact Info Column -->
-      <div class="col-md-5">
-        <div class="row mb-2">
-          <div class="col-4 fw-bold text-start">Address:</div>
-          <div class="col-8 text-start">1707 West 20th Street, Laurel, MS</div>
+  <!-- CONTACT -->
+  <div class="tab-pane fade" id="contact">
+    <section>
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="row mb-2">
+            <div class="col-4 fw-bold text-start">Address:</div>
+            <div class="col-8 text-start">1707 West 20th Street, Laurel, MS</div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-4 fw-bold text-start">Phone:</div>
+            <div class="col-8 text-start"><a href="tel:+16014282004">(601) 428-2004</a></div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-4 fw-bold text-start">Email:</div>
+            <div class="col-8 text-start"><a href="mailto:admin@peaklaurel.com">admin@peaklaurel.com</a></div>
+          </div>
         </div>
-        <div class="row mb-2">
-          <div class="col-4 fw-bold text-start">Phone:</div>
-          <div class="col-8 text-start"><a href="tel:+16014282004">(601) 428-2004</a></div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-4 fw-bold text-start">Email:</div>
-          <div class="col-8 text-start"><a href="mailto:admin@peaklaurel.com">admin@peaklaurel.com</a></div>
+        <div class="col-md-7 d-flex">
+          <div class="map-container w-100" style="border-radius:12px; overflow:hidden;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.073763364357!2d-89.15236312560468!3d31.713879974125916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88833545a60ac229%3A0x2c36e4594671fdeb!2sPeak%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1764895919440!5m2!1sen!2sus" 
+              style="width:100%; height:100%; min-height:150px; border:0;" 
+              allowfullscreen 
+              loading="lazy">
+            </iframe>
+          </div>
         </div>
       </div>
 
-      <!-- Map Column (spans all 3 rows) -->
-      <div class="col-md-7 d-flex">
-        <div class="map-container w-100" style="border-radius:12px; overflow:hidden;">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.073763364357!2d-89.15236312560468!3d31.713879974125916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88833545a60ac229%3A0x2c36e4594671fdeb!2sPeak%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1764895919440!5m2!1sen!2sus" 
-            style="width:100%; height:100%; min-height:150px; border:0;" 
-            allowfullscreen 
-            loading="lazy">
-          </iframe>
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="contact-form-container">
+            <iframe id="contactForm" src="https://docs.google.com/forms/d/e/1FAIpQLSeogBotqBvyYvw7WyKU7Hu70oBKcYn_bmi_rwgNdmf9DT1rCw/viewform" scrolling="yes"></iframe>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Contact Form Row -->
-    <div class="row mt-4">
-      <div class="col-12">
-        <div class="contact-form-container">
-          <iframe id="contactForm" src="https://docs.google.com/forms/d/e/1FAIpQLSeogBotqBvyYvw7WyKU7Hu70oBKcYn_bmi_rwgNdmf9DT1rCw/viewform" scrolling="yes"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
-
-
 
 <footer>
   <div class="container">
@@ -385,15 +387,11 @@ const backToTop = document.getElementById("backToTop");
 window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
 backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-// Popovers for provider cards (hover + focus)
+// Popovers for provider cards
 document.addEventListener('DOMContentLoaded', () => {
   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
   popoverTriggerList.forEach(el => {
-    new bootstrap.Popover(el, {
-      trigger: 'hover focus', // hover for desktop, focus for keyboard
-      placement: 'top',
-      container: 'body'
-    });
+    new bootstrap.Popover(el, { trigger: 'hover focus', placement: 'top', container: 'body' });
   });
 });
 
@@ -405,19 +403,16 @@ mobileLinks.forEach(link => {
     mobileLinks.forEach(l => l.classList.remove('active'));
     link.classList.add('active');
 
-    // Switch desktop tab
+    // Switch the desktop tab
     const targetSelector = link.getAttribute('data-bs-target');
     const desktopTrigger = document.querySelector(`.nav-tabs [data-bs-target="${targetSelector}"]`);
     if (desktopTrigger) bootstrap.Tab.getOrCreateInstance(desktopTrigger).show();
 
-    // Collapse mobile nav
-    const collapseEl = document.getElementById('mobileNav');
-    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl);
-    bsCollapse.hide();
+    // DO NOT automatically collapse mobile navbar
   });
 });
 
-// DYNAMIC GOOGLE FORM HEIGHT
+// Resize Google Form dynamically
 function resizeContactForm() {
   const iframe = document.getElementById('contactForm');
   const windowHeight = window.innerHeight;
@@ -427,8 +422,5 @@ function resizeContactForm() {
 window.addEventListener('load', resizeContactForm);
 window.addEventListener('resize', resizeContactForm);
 </script>
-
-
-
 </body>
 </html>
