@@ -72,8 +72,7 @@ header img.logo {
   color: #00A6A6;
 }
 .nav-tabs .nav-link.active {
-  background-color: 
-#339957;
+  background-color: #339957;
   color: #003366;
   border: none;
 }
@@ -142,8 +141,9 @@ section {
 }
 
 /* MOBILE NAVBAR */
-.navbar-mobile { display: none; 
-background-color: #000000;
+.navbar-mobile { 
+  display: none; 
+  background-color: #000000;
 }
 @media (max-width: 768px) {
   body { font-size: 16px; }
@@ -157,6 +157,11 @@ background-color: #000000;
   .navbar-mobile .nav-link { color: #ffffff; margin: 0.25rem 0; }
   .navbar-mobile .nav-link:hover { color: #00A6A6; }
   .navbar-mobile .nav-link.active { background-color: #00A6A6; color: #003366; }
+   .provider-card img {
+    height: auto;      /* let height adjust */
+    max-height: 300px; /* optional max */
+    object-fit: contain; /* keeps full image visible */
+  }
 }
 .navbar-mobile .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -168,7 +173,6 @@ background-color: #000000;
   border: none;             /* removes any border */
   padding: 0;               /* remove extra padding if needed */
 }
-
 #testimonialCarousel footer {
   background: transparent !important; /* ensures name background is transparent */
   color: #003366 !important;          /* set name color */
@@ -184,7 +188,6 @@ background-color: #000000;
   border-radius: 12px;
   overflow: hidden;
 }
-
 .contact-form-container iframe {
   flex: 1;
   width: 100%;
@@ -195,18 +198,15 @@ background-color: #000000;
   flex-wrap: wrap;
   gap: 1rem;
 }
-
 .contact-row .col-md-5,
 .contact-row .col-md-7 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* aligns content to top */
 }
-
 .map-container {
   flex: 1; /* makes map column match height of contact info */
 }
-
 </style>
 </head>
 <body>
@@ -241,7 +241,6 @@ background-color: #000000;
 </nav>
 
 <div class="tab-content">
-
   <!-- HOME -->
   <div class="tab-pane fade show active" id="home">
     <section>
@@ -312,42 +311,51 @@ background-color: #000000;
     </section>
   </div>
 
-  <!-- CONTACT -->
-  <div class="tab-pane fade" id="contact">
-    <section>
-     <div class="row contact-row g-4">
-  <!-- CONTACT INFO COLUMN -->
-  <div class="col-md-5 d-flex flex-column justify-content-start mb-3">
-    <p><strong>Address:</strong> 1707 West 20th Street, Laurel, MS</p>
-    <p><strong>Phone:</strong> <a href="tel:+16014282004">(601) 428-2004</a></p>
-    <p><strong>Email:</strong> <a href="mailto:admin@peaklaurel.com">admin@peaklaurel.com</a></p>
-  </div>
-
-  <!-- MAP COLUMN -->
-  <div class="col-md-7 mb-3 d-flex">
-    <div class="map-container" style="overflow:hidden; border-radius:12px; flex:1;">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.073763364357!2d-89.15236312560468!3d31.713879974125916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88833545a60ac229%3A0x2c36e4594671fdeb!2sPeak%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1764895919440!5m2!1sen!2sus" 
-        style="width:100%; height:100%; min-height:200px; border:0;" 
-        allowfullscreen 
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
-</div>
-
-
-      <div class="row mt-4">
-        <div class="col-12">
-          <div class="contact-form-container">
-            <iframe id="contactForm" src="https://docs.google.com/forms/d/e/1FAIpQLSeogBotqBvyYvw7WyKU7Hu70oBKcYn_bmi_rwgNdmf9DT1rCw/viewform" scrolling="yes"></iframe>
-          </div>
+<!-- CONTACT -->
+<div class="tab-pane fade" id="contact">
+  <section>
+    <div class="row g-4">
+      <!-- Contact Info Column -->
+      <div class="col-md-5">
+        <div class="row mb-2">
+          <div class="col-4 fw-bold text-start">Address:</div>
+          <div class="col-8 text-start">1707 West 20th Street, Laurel, MS</div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-4 fw-bold text-start">Phone:</div>
+          <div class="col-8 text-start"><a href="tel:+16014282004">(601) 428-2004</a></div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-4 fw-bold text-start">Email:</div>
+          <div class="col-8 text-start"><a href="mailto:admin@peaklaurel.com">admin@peaklaurel.com</a></div>
         </div>
       </div>
-    </section>
-  </div>
 
+      <!-- Map Column (spans all 3 rows) -->
+      <div class="col-md-7 d-flex">
+        <div class="map-container w-100" style="border-radius:12px; overflow:hidden;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.073763364357!2d-89.15236312560468!3d31.713879974125916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88833545a60ac229%3A0x2c36e4594671fdeb!2sPeak%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1764895919440!5m2!1sen!2sus" 
+            style="width:100%; height:100%; min-height:150px; border:0;" 
+            allowfullscreen 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form Row -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="contact-form-container">
+          <iframe id="contactForm" src="https://docs.google.com/forms/d/e/1FAIpQLSeogBotqBvyYvw7WyKU7Hu70oBKcYn_bmi_rwgNdmf9DT1rCw/viewform" scrolling="yes"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+
+
 
 <footer>
   <div class="container">
@@ -373,32 +381,7 @@ document.getElementById('providersBtn').onclick = () => providersTab.show();
 // Back to top button
 const backToTop = document.getElementById("backToTop");
 window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
-backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-// Popovers
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el, {
-  placement: 'top',
-  boundary: 'viewport',
-  container: el,
-  trigger: 'hover'
-}));
-
-// MOBILE nav link toggling
-const mobileLinks = document.querySelectorAll('.navbar-mobile .nav-link');
-mobileLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    mobileLinks.forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-    const targetSelector = link.getAttribute('data-bs-target');
-    const desktopTrigger = document.querySelector(`.nav-tabs [data-bs-target="${targetSelector}"]`);
-    if (desktopTrigger) bootstrap.Tab.getOrCreateInstance(desktopTrigger).show();
-    const collapseEl = document.getElementById('mobileNav');
-    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl);
-    bsCollapse.hide();
-  });
-});
+backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth
 
 // DYNAMIC GOOGLE FORM HEIGHT
 function resizeContactForm() {
