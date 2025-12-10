@@ -215,6 +215,8 @@ section {
 .map-container {
   flex: 1;
 }
+
+
 </style>
 </head>
 <body>
@@ -229,6 +231,7 @@ section {
   <li class="nav-item"><button class="nav-link" data-bs-target="#about" data-bs-toggle="tab">About Us</button></li>
   <li class="nav-item"><button class="nav-link" data-bs-target="#providers" data-bs-toggle="tab">Our Providers</button></li>
   <li class="nav-item"><button class="nav-link" data-bs-target="#contact" data-bs-toggle="tab">Contact</button></li>
+  <li class="nav-item"><button class="nav-link" data-bs-target="#social" data-bs-toggle="tab">Social</button></li>
 </ul>
 
 <!-- Mobile Navbar -->
@@ -242,8 +245,9 @@ section {
         <li class="nav-item"><a class="nav-link active" data-bs-target="#home" data-bs-toggle="tab">Home</a></li>
         <li class="nav-item"><a class="nav-link" data-bs-target="#about" data-bs-toggle="tab">About Us</a></li>
         <li class="nav-item"><a class="nav-link" data-bs-target="#providers" data-bs-toggle="tab">Our Providers</a></li>
+		<li class="nav-item"><a class="nav-link" data-bs-target="#social" data-bs-toggle="tab">Social</a></li>
         <li class="nav-item"><a class="nav-link" data-bs-target="#contact" data-bs-toggle="tab">Contact</a></li>
-      </ul>
+	  </ul>
     </div>
   </div>
 </nav>
@@ -305,7 +309,7 @@ section {
         <div class="col-12 col-md-3">
           <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="Cody Rogers, DPT" data-bs-content="Cody has a special passion for geriatric rehabilitation and helps older adults maintain independence, safety, and quality of life." style="cursor:pointer;">
             <img src="images/Cody.jpg" class="card-img-top">
-            <div class="card-body"><h5>Cody Rogers, DPT</h5><p>Geriatric & Balance Rehabilitation</p></div>
+            <div class="card-body"><h5>Cody Rogers, PT, DPT</h5><p>Geriatric & Balance Rehabilitation</p></div>
           </div>
         </div>
         <!-- Bailey -->
@@ -359,6 +363,26 @@ section {
     </section>
   </div>
 </div>
+<!-- SOCIAL -->
+<div class="tab-pane fade" id="social"style="width:100%">
+  <section>
+	<div class="fb-container"style="width:100%">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0">
+  </script>
+
+<div class="fb-page" style="width:100%"
+data-tabs="timeline,events,messages"
+data-href="https://www.facebook.com/peaklaurel"
+data-width="500"
+data-height="850"
+data-adapt-container-width="true" 
+data-hide-cover="false"></div>
+</div>
+  </section>
+</div>
+
 
 <footer>
   <div class="container">
