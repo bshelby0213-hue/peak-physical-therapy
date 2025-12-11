@@ -1,118 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Peak Physical Therapy in Laurel, MS offers expert care and personalized rehabilitation. Schedule your appointment today!">
-<meta name="google-site-verification" content="GEuJfKXAb4qRHW_h3y4sa4iyKN2WDafFRNlbNmUyhk0">
-<title>Best Physical Therapy in Laurel Mississippi | Peak PT</title>
-<link rel="icon" type="image/png" href="https://peaklaurel.com/images/PeakLogoTransparent.png">
-<link rel="apple-touch-icon" href="images/PeakLogoTransparent.png">
-<meta property="og:image" content="images/PeakLogoTransparent.png">
-<script src="https://connect.facebook.net/en_US/sdk.js" async crossorigin="anonymous"></script>
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-<style>
-html, body {
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-  url('images/peakbackground.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-.tab-content { flex: 1 0 auto; display: flex; flex-direction: column; }
-.tab-content section { flex: 1 0 auto; margin-bottom: 0; }
-footer { flex-shrink: 0; background: #000; color: white; padding: 20px; text-align: center; }
-header { background: #F2F2F2; height: 150px; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); z-index: 10; }
-header img.logo { height: 205%; width: auto; }
-/* Desktop Nav Tabs */
-.nav-tabs { position: sticky; top: 0; z-index: 1000; background-color: #000; height: 70px; border-bottom: 2px solid #00A6A6; justify-content: center; overflow-x: auto; white-space: nowrap; }
-.nav-tabs .nav-link { color: #fff; height: 100%; display: flex; align-items: center; justify-content: center; }
-.nav-tabs .nav-link:hover { color: #00A6A6; }
-.nav-tabs .nav-link.active { background-color: #339957; color: #003366; border: none; }
-/* Sections */
-section { background: rgba(255,255,255,0.95); width: 75%; margin: 0 auto; padding: 40px 20px; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
-.hero { background-color: transparent; padding: 80px 20px; border-radius: 16px; color: #003366; margin-bottom: 40px; }
-.service-card { border: none; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 5px solid #00A6A6; }
-.map-container iframe { border: 0; width: 100%; height: 200px; }
-#backToTop { position: fixed; bottom: 40px; right: 40px; background: #003366; color: white; border: none; padding: 12px 15px; border-radius: 50px; font-size: 20px; display: none; z-index: 999; }
-#backToTop:hover { background: #00A6A6; }
-.social-icons a { color: white; margin: 0 8px; font-size: 1.2rem; }
-.social-icons a:hover { color: #00A6A6; }
-/* MOBILE NAVBAR */
-.navbar-mobile { display: none; background-color: #000; }
-@media (max-width: 768px) {
-  body { font-size: 16px; }
-  section { width: 90%; padding: 20px; }
-  header img.logo { height: 120px; }
-  .hero { padding: 40px 10px; }
-  .service-card h4 { font-size: 1.1rem; }
-  .nav-tabs { display: none; }
-  .navbar-mobile { display: block; }
-  .navbar-mobile .nav-link { color: #fff; margin: 0.25rem 0; }
-  .navbar-mobile .nav-link:hover { color: #00A6A6; }
-  .navbar-mobile .nav-link.active { background-color: #339957; color: #003366; }
-}
-/* Responsive Facebook */
-.fb-container { max-width: 100%; overflow: visible; }
-.fb-page, .fb-page iframe { width: 100% !important; height: auto !important; min-height: 600px; }
-</style>
-</head>
-<body>
-<header>
-  <img src="images/PeakLogoTransparent.png" class="logo">
-</header>
-<!-- Desktop Tabs -->
-<ul class="nav nav-tabs" id="clinicTabs" role="tablist">
-  <li class="nav-item"><button class="nav-link active" data-bs-target="#home" data-bs-toggle="tab">Home</button></li>
-  <li class="nav-item"><button class="nav-link" data-bs-target="#about" data-bs-toggle="tab">About Us</button></li>
-  <li class="nav-item"><button class="nav-link" data-bs-target="#providers" data-bs-toggle="tab">Our Providers</button></li>
-  <li class="nav-item"><button class="nav-link" data-bs-target="#contact" data-bs-toggle="tab">Contact</button></li>
-  <li class="nav-item"><button class="nav-link" data-bs-target="#social" data-bs-toggle="tab">Social</button></li>
-</ul>
-<!-- Mobile Navbar -->
-<nav class="navbar navbar-mobile navbar-expand-lg">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mobileNav">
-      <ul class="navbar-nav flex-column">
-        <li class="nav-item"><a class="nav-link active" data-bs-target="#home" data-bs-toggle="tab">Home</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-target="#about" data-bs-toggle="tab">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-target="#providers" data-bs-toggle="tab">Our Providers</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-target="#contact" data-bs-toggle="tab">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" data-bs-target="#social" data-bs-toggle="tab">Social</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="tab-content">
-  <!-- SOCIAL -->
-  <div class="tab-pane fade" id="social" role="tabpanel">
-    <section>
-      <div class="fb-container">
-        <div id="fb-root"></div>
-        <div class="fb-page" data-href="https://www.facebook.com/peaklaurel" data-tabs="timeline,events,messages" data-width="100%" data-height="" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Peak Physical Therapy in Laurel, MS offers expert care and personalized rehabilitation. Schedule your appointment today!">
+        <meta name="google-site-verification" content="GEuJfKXAb4qRHW_h3y4sa4iyKN2WDafFRNlbNmUyhk0">
+        <title>Best Physical Therapy in Laurel Mississippi | Peak PT</title>
+        <link rel="icon" type="image/png" href="https://peaklaurel.com/images/PeakLogoTransparent.png">
+        <link rel="apple-touch-icon" href="images/PeakLogoTransparent.png">
+        <meta property="og:image" content="images/PeakLogoTransparent.png">
+        <script src="https://connect.facebook.net/en_US/sdk.js?hash=097a730e67cedb71e23187745f7f2722" async="" crossorigin="anonymous"></script><script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://peaklaurel.com",
+            "logo": "https://peaklaurel.com/images/PeakLogoTransparent.png"
+            }
+        </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        
+        <style>
+            html, body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+            url('images/peakbackground.jpg') no-repeat center center fixed;
+            background-size: cover;
+            }
+            .tab-content {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            }
+            .tab-content section {
+            flex: 1 0 auto;
+            margin-bottom: 0;
+            }
+            footer {
+            flex-shrink: 0;
+            background: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            }
+            header {
+            background: #F2F2F2;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            z-index: 10;
+            }
+            header img.logo {
+            height: 205%;
+            width: auto;
+            }
+            /* Desktop Nav Tabs */
+            .nav-tabs {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #000000;
+            height: 70px;
+            border-bottom: 2px solid #00A6A6;
+            justify-content: center;
+            overflow-x: auto;
+            white-space: nowrap;
+            }
+            .nav-tabs .nav-link {
+            color: #ffffff;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+            .nav-tabs .nav-link:hover {
+            color: #00A6A6;
+            }
+            .nav-tabs .nav-link.active {
+            background-color: #339957;
+            color: #003366;
+            border: none;
+            }
+            /* Sections */
+            section {
+            background: rgba(255,255,255,0.95);
+            width: 75%;
+            margin: 0 auto;
+            padding: 40px 20px;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            }
+            .hero {
+            background-color: transparent;
+            padding: 80px 20px;
+            border-radius: 16px;
+            color: #003366;
+            margin-bottom: 40px;
+            }
+            .service-card {
+            border: none;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 5px solid #00A6A6;
+            }
+            .map-container iframe {
+            border: 0;
+            width: 100%;
+            height: 200px;
+            }
+            #backToTop {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: #003366;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 50px;
+            font-size: 20px;
+            display: none;
+            z-index: 999;
+            }
+            #backToTop:hover { background: #00A6A6; }
+            .social-icons a {
+            color: white;
+            margin: 0 8px;
+            font-size: 1.2rem;
+            }
+            .social-icons a:hover { color: #00A6A6; }
+            /* Provider Images */
+            .provider-card img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-top-left-radius: .375rem;
+            border-top-right-radius: .375rem;
+            }
+            /* MOBILE NAVBAR */
+            .navbar-mobile {	
+            display: none;	
+            background-color: #000000;
+            }
+            @media (max-width: 768px) {
+            body { font-size: 16px; }
+            section { width: 90%; padding: 20px; }
+            header img.logo { height: 120px; }
+            .hero { padding: 40px 10px; }
+            .service-card h4 { font-size: 1.1rem; }
+            .provider-card img { height: 200px; }
+            .nav-tabs { display: none; }
+            .navbar-mobile { display: block; }
+            .navbar-mobile .nav-link { color: #ffffff; margin: 0.25rem 0; }
+            .navbar-mobile .nav-link:hover { color: #00A6A6; }
+            .navbar-mobile .nav-link.active { background-color: #339957; color: #003366; }
+            .provider-card img {
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            }
+            }
+            .navbar-mobile .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+            #testimonialCarousel blockquote {
+            font-size: 1.2rem;
+            color: #003366;
+            background: transparent;
+            border: none;
+            padding: 0;
+            }
+            #testimonialCarousel footer {
+            background: transparent !important;
+            color: #003366 !important;
+            padding: 0 !important;
+            font-style: normal;
+            }
+            .contact-form-container {
+            width: 100%;
+            height: 80vh;
+            max-height: 1000px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
+            overflow: hidden;
+            }
+            .contact-form-container iframe {
+            flex: 1;
+            width: 100%;
+            border: 0;
+            }
+            .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            }
+            .contact-row .col-md-5,
+            .contact-row .col-md-7 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            }
+            .map-container {
+            flex: 1;
+            }
+            .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            }
+            .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            }
+            /* NEW: CSS for responsive Facebook container */
+            .fb-container {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        </style>
+        <style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+            .fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+            .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/PeakLogoTransparent.png" class="logo">
+        </header>
+        <ul class="nav nav-tabs" id="clinicTabs" role="tablist">
+            <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-target="#home" data-bs-toggle="tab" aria-selected="true" role="tab" tabindex="-1">Home</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-target="#about" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">About Us</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-target="#providers" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Our Providers</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-target="#contact" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Contact</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" data-bs-target="#social" data-bs-toggle="tab" aria-selected="false" role="tab">Social</button></li>
+        </ul>
+        <nav class="navbar navbar-mobile navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mobileNav">
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-item"><a class="nav-link active" data-bs-target="#home" data-bs-toggle="tab">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-target="#about" data-bs-toggle="tab">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-target="#providers" data-bs-toggle="tab">Our Providers</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-target="#contact" data-bs-toggle="tab">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-target="#social" data-bs-toggle="tab">Social</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="home" role="tabpanel">
+                <section>
+                    <div class="hero">
+                        <h1 class="display-5 mb-3">Welcome to Peak Physical Therapy</h1>
+                        <p class="lead">Helping you move better, feel better, and live better.</p>
+                    </div>
+                    <div class="row g-4 mb-4">
+                        <div class="col-12 col-md-4">
+                            <div class="card service-card p-3">
+                                <h4>Orthopedic Rehab</h4>
+                                <p>Recover faster and improve mobility after injuries or surgery.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card service-card p-3">
+                                <h4>Pain Management</h4>
+                                <p>Personalized plans to reduce chronic pain and restore function.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card service-card p-3">
+                                <h4>Sports Performance</h4>
+                                <p>Strengthen, stabilize, and enhance athletic performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary my-3" id="providersBtn">Meet Our Providers</button>
+                    <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner text-center">
+                            <div class="carousel-item active">
+                                <blockquote>
+                                    "Peak Physical Therapy helped me recover faster than expected."
+                                    <footer>— Jane D.</footer>
+                                </blockquote>
+                            </div>
+                            <div class="carousel-item">
+                                <blockquote>
+                                    "Professional, caring, and knowledgeable."
+                                    <footer>— Mark S.</footer>
+                                </blockquote>
+                            </div>
+                            <div class="carousel-item">
+                                <blockquote>
+                                    "Excellent service and friendly staff!"
+                                    <footer>— Lisa P.</footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="about" role="tabpanel">
+                <section>
+                    <h2>Who We Are</h2>
+                    <p>Peak Physical Therapy is dedicated to helping individuals regain mobility, strength, and confidence through personalized care.</p>
+                    <p>Our licensed therapists bring over 20 years of combined experience.</p>
+                    <br>	
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/S7Bdu0NdGXw?si=MojqV25OOvNMjIig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="providers" role="tabpanel">
+                <section>
+                    <h2 class="mb-4">Our Providers</h2>
+                    <div class="row g-4">
+                        <div class="col-12 col-md-3">
+                            <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Joey has been serving the Laurel community as a physical therapist for well over 38 years and is proud to be an owner and partner at Peak Physical Therapy. He specializes in craniofacial treatment, TMJ, headaches, and facial palsies." style="cursor:pointer;" data-bs-original-title="Joey Cooley PT, DPT">
+                                <img src="images/Joey.jpg" class="card-img-top" alt="Joey Cooley, Physical Therapy - Laurel, MS">
+                                <div class="card-body">
+                                    <h5>Joey Cooley PT, DPT</h5>
+                                    <p>Craniofacial & TMJ Therapy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Brady is an owner and partner of Peak Physical Therapy and has advanced training in sports medicine, dry needling, and functional movement assessment." style="cursor:pointer;" data-bs-original-title="Brady Church PT, DPT">
+                                <img src="images/Brady.jpg" class="card-img-top" alt="Brady Church, Physical Therapy - Laurel, MS">
+                                <div class="card-body">
+                                    <h5>Brady Church PT, DPT</h5>
+                                    <p>Sports & Orthopedic Rehabilitation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Cody has a special passion for geriatric rehabilitation and helps older adults maintain independence, safety, and quality of life." style="cursor:pointer;" data-bs-original-title="Cody Rogers, PT, DPT">
+                                <img src="images/Cody.jpg" class="card-img-top" alt="Cody Rogers, Physical Therapy - Laurel, MS">
+                                <div class="card-body">
+                                    <h5>Cody Rogers, PT, DPT</h5>
+                                    <p>Geriatric & Balance Rehabilitation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="card h-100 clickable-card provider-card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Bailey specializes in pelvic health, LSVT BIG therapy, and pelvic floor rehabilitation." style="cursor:pointer;" data-bs-original-title="Bailey Bynum, PT, DPT">
+                                <img src="images/Bailey.jpg" class="card-img-top" alt="Bailey Bynum, Physical Therapy - Laurel, MS">
+                                <div class="card-body">
+                                    <h5>Bailey Bynum, PT, DPT</h5>
+                                    <p>Pelvic Health Specialist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel">
+                <section>
+                    <div class="row g-4">
+                        <div class="col-md-5">
+                            <div class="row mb-2">
+                                <div class="col-4 fw-bold text-start">Address:</div>
+                                <div class="col-8 text-start">1707 West 20th Street, Laurel, MS 39440</div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-4 fw-bold text-start">Phone:</div>
+                                <div class="col-8 text-start"><a href="tel:+16014282004">(601) 428-2004</a></div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-4 fw-bold text-start">Email:</div>
+                                <div class="col-8 text-start"><a href="mailto:admin@peaklaurel.com">admin@peaklaurel.com</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 d-flex">
+                            <div class="map-container w-100" style="border-radius:12px; overflow:hidden;">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.073763364357!2d-89.15236312560468!3d31.713879974125916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88833545a60ac229%3A0x2c36e4594671fdeb!2sPeak%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1764895919440!5m2!1sen!2sus" style="width:100%; height:100%; min-height:150px; border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="contact-form-container">
+                                <iframe id="contactForm" src="https://docs.google.com/forms/d/e/1FAIpQLSeFSPr2Vg70kfB8yGR-qIwAt02RuShuusCe2980RIRrDBbAuw/viewform?usp=header" scrolling="yes" style="height: 903px;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="social" role="tabpanel">
+                <section>
+                    <div class="fb-container"> 
+                        <div id="fb-root">
+                            </div>
+                        <div class="fb-page" 
+                             data-tabs="timeline,events,messages" 
+                             data-href="https://www.facebook.com/peaklaurel" 
+                             data-width="380" 
+                             data-height="850" 
+                             data-adapt-container-width="true" 
+                             data-hide-cover="false">
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-      </div>
-    </section>
-  </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"></script>
-<script>
-  // Initialize Facebook plugin
-  window.fbAsyncInit = function() {
-    FB.init({ xfbml: true, version: 'v17.0' });
-  };
-</script>
-</body>
+        <footer>
+            <div class="container">
+                <p>© <span id="year">2025</span> Peak Physical Therapy</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61575786676765" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/peakptlaurel/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+        </footer>
+        <button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Providers tab button
+            const providersTab = new bootstrap.Tab(document.querySelector('[data-bs-target="#providers"]'));
+            document.getElementById('providersBtn').onclick = () => providersTab.show();
+            
+            // Back to top button
+            const backToTop = document.getElementById("backToTop");
+            window.onscroll = () => backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+            backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+            
+            // Popovers for provider cards
+            document.addEventListener('DOMContentLoaded', () => {
+                const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+                popoverTriggerList.forEach(el => {
+                new bootstrap.Popover(el, { trigger: 'hover focus', placement: 'top', container: 'body' });
+                });
+            });
+            
+            // MOBILE nav link toggling
+            const mobileLinks = document.querySelectorAll('.navbar-mobile .nav-link');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                e.preventDefault();
+                mobileLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                // Switch the desktop tab
+                const targetSelector = link.getAttribute('data-bs-target');
+                const desktopTrigger = document.querySelector(`.nav-tabs [data-bs-target="${targetSelector}"]`);
+                if (desktopTrigger) bootstrap.Tab.getOrCreateInstance(desktopTrigger).show();
+                
+                // DO NOT automatically collapse mobile navbar
+                });
+            });
+            
+            // Resize Google Form dynamically
+            function resizeContactForm() {
+                const iframe = document.getElementById('contactForm');
+                const windowHeight = window.innerHeight;
+                const offset = 350; // adjust for header/footer/contact row
+                iframe.style.height = (windowHeight - offset) + 'px';
+            }
+            window.addEventListener('load', resizeContactForm);
+            window.addEventListener('resize', resizeContactForm);
+        </script>
+    </body>
 </html>
