@@ -350,12 +350,10 @@
                   <div class="carousel-inner text-center" id ="caroData">
                   </div>
                </div>
-			   <script>
-// Function to parse CSV into objects
+<script>
+// ✅ Correct CSV parser (fixed)
 function parseCSV(csv) {
-  function parseCSV(csv) {
   const lines = csv.trim().split('\n');
-  const headers = lines[0].split(',');
 
   return lines.slice(1).map(line => {
     const result = [];
@@ -380,25 +378,26 @@ function parseCSV(csv) {
     };
   });
 }
-}
 
-// Load CSV and populate carousel
-fetch('reviews.csv')
-  .then(response => response.text())
-  .then(text => {
-    const reviews = parseCSV(text);
-    const caroDiv = document.getElementById('caroData');
+// ✅ Wait until page loads (important)
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('reviews.csv')
+    .then(response => response.text())
+    .then(text => {
+      const reviews = parseCSV(text);
+      const caroDiv = document.getElementById('caroData');
 
-    caroDiv.innerHTML = reviews.map((r, index) => `
-      <div class="carousel-item${index === 0 ? ' active' : ''}">
-        <blockquote>
-          "${r.review}"
-          <footer>— ${r.author}</footer>
-        </blockquote>
-      </div>
-    `).join('');
-  })
-  .catch(err => console.error('Error loading CSV:', err));
+      caroDiv.innerHTML = reviews.map((r, index) => `
+        <div class="carousel-item${index === 0 ? ' active' : ''}">
+          <blockquote>
+            "${r.review}"
+            <footer>— ${r.author}</footer>
+          </blockquote>
+        </div>
+      `).join('');
+    })
+    .catch(err => console.error('Error loading CSV:', err));
+});
 </script>
 			   
             </section>
